@@ -1,0 +1,28 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .input {
+        font-size: 16px;
+        font-weight: 400;
+        border-radius: 8px;
+        border: 0;
+        border: 1px solid #50A2FB;
+        padding: 8px;
+
+        &:focus {
+            outline: 1px solid #50A2FB;
+        }
+
+        &::placeholder {
+            color: var(--tg-theme-hint-color);
+        }
+    }
+
+    .label {
+        height: 18px;
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+}

@@ -1,0 +1,24 @@
+.wrapper {
+    width: 120px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    border: 1px solid #BBBBBB;
+    opacity: 0.8;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.15);
+
+    .wrapper-img {
+        display: flex;
+        justify-content: center;
+    }
+
+    .title {
+        margin: 10px;
+        text-align: center;
+    }
+
+    .is-selected {
+        background-color: #50A2FB;
+    }
+}
