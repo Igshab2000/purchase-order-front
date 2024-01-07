@@ -37,7 +37,7 @@ export const Input: ForwardRefExoticComponent<InputProps & RefAttributes<HTMLInp
           id={name}
           name={name}
           onChange={handleInputChange}
-          className={styles.input}
+          className={`${styles.input} ${error ? styles['input-error'] : ''}`}
           type={type}
           required={required}
           {...rest}

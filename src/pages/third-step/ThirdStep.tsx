@@ -6,6 +6,8 @@ import { useHistory } from 'react-router-dom';
 import { Button } from 'components/Button/Button';
 import { CheckboxField } from 'components/fields/CheckboxField/CheckboxField';
 import { InputField } from 'components/fields/InputField/InputField';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { useThirdFormValidation } from './ThirdStep.utils';
 import styles from './ThirdStep.module.scss';
 
 const ThirdStep: FC = () => {
@@ -18,9 +20,12 @@ const ThirdStep: FC = () => {
     partsList: [{ partName: '', count: 0, price: 0 }],
   };
 
+  const formSchema = useThirdFormValidation();
+
   const { handleSubmit, reset, control, formState, watch } = useForm<TThirdStepForm>({
     mode: 'all',
     shouldFocusError: true,
+    resolver: yupResolver(formSchema),
     defaultValues,
   });
 
