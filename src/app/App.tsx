@@ -12,6 +12,7 @@ const ThirdStep = lazy(() => import('../pages/third-step/ThirdStep'));
 export const App: FC = () => {
   useEffect(() => {
     tg.ready();
+    console.warn('themeParams', tg.themeParams);
   }, []);
 
   return (

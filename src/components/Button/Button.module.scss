@@ -1,6 +1,6 @@
 .button {
     padding: 5px 8px;
-    background: var(--tg-theme-button-color);
+    background-color: var(--tg-theme-button-color);
     color: var(--tg-theme-button-text-color);
     border: none;
     outline: none;
@@ -10,6 +10,6 @@
 }
 
 .disabled {
-    background: #757575;
+    background-color: #757575;
     cursor: not-allowed;
 }
