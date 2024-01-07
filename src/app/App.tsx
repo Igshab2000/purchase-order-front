@@ -1,4 +1,4 @@
-import { lazy, type FC } from 'react';
+import { lazy, type FC, useEffect } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import styles from './App.module.scss';
@@ -10,6 +10,10 @@ const SecondStep = lazy(() => import('../pages/second-step/SecondStep'));
 const ThirdStep = lazy(() => import('../pages/third-step/ThirdStep'));
 
 export const App: FC = () => {
+  useEffect(() => {
+    tg.ready();
+  }, []);
+
   return (
     <div className={styles.wrapper}>
       <BrowserRouter>
