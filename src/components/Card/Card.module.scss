@@ -1,7 +1,7 @@
 .wrapper {
     width: 120px;
     height: 150px;
-    background-color: #fff;
+    background-color: var(--tg-theme-bg-color);
     display: flex;
     flex-direction: column;
     border-radius: 15px;
