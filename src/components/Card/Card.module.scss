@@ -1,5 +1,6 @@
 .wrapper {
     width: 120px;
+    height: 150px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -17,8 +18,8 @@
         margin: 10px;
         text-align: center;
     }
+}
 
-    .is-selected {
-        background-color: #50A2FB;
-    }
+.is-selected {
+    background-color: var(--color-control);
 }

@@ -5,4 +5,11 @@
     border: none;
     outline: none;
     cursor: pointer;
+    border-radius: 12px;
+    font-size: 0.9rem;
+}
+
+.disabled {
+    background: #757575;
+    cursor: not-allowed;
 }

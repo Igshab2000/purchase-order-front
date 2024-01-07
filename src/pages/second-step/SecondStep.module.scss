@@ -1,17 +1,18 @@
 .wrapper {
     display: flex;
     flex-direction: column;
+    gap: 20px;
     height: 100%;
 
     .content {
-        flex: 1 1 auto;
         display: flex;
-        gap: 15px;
+        flex-direction: column;
+        flex: 1 1 auto;
+        gap: 10px;
     }
 
     .buttons {
-        margin-top: 20px;
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-around;
     }
 }

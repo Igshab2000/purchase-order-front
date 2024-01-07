@@ -2,6 +2,11 @@ import type { ChangeEventHandler, FocusEventHandler } from 'react';
 
 export type TInputValueType = string | readonly string[] | number;
 
+export enum EInputType {
+  input = 'input',
+  phoneInput = 'phoneInput',
+}
+
 export type InputProps = Readonly<{
   /**
    * Имя инпута
@@ -39,11 +44,6 @@ export type InputProps = Readonly<{
   disabled?: boolean;
 
   /**
-   * Наличие лейбла
-   */
-  isLabel?: boolean;
-
-  /**
    * Содержимое лейбла
    */
   labelContent?: string;
@@ -53,10 +53,19 @@ export type InputProps = Readonly<{
    */
   placeholder?: string;
   /**
+   * Текст ошибки
+   */
+  error?: string;
+  /**
+   * Тип кастомного инпута (обычный или с маской телефона)
+   */
+  inputType?: EInputType;
+
+  /**
    * Обработчик изменений
    * @param event
    */
-  onChange?: ChangeEventHandler<HTMLInputElement>;
+  onChange?: (value: string) => void;
 
   /**
    * Обработчик фокуса
@@ -68,3 +77,6 @@ export type InputProps = Readonly<{
    */
   onBlur?: FocusEventHandler<HTMLInputElement>;
 }>;
+
+export type ExcludedKeys = 'onChange' | 'onFocus' | 'onBlur' | 'value' | 'disabled' | 'readOnly';
+export type ChildrenProps = Omit<InputProps, ExcludedKeys>;

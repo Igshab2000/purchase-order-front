@@ -1,0 +1,93 @@
+.Checkbox {
+    .label {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 5px 0;
+      cursor: pointer;
+  
+      .text {
+        margin-left: 12px;
+        font-size: 0.9rem;
+        font-family: inherit;
+        line-height: 1rem;
+      }
+  
+      .input {
+        width: 0;
+        height: 0;
+        margin: 0;
+        opacity: 0;
+  
+        &:checked + .fake_box {
+          position: relative;
+          border-color: var(--color-control);
+  
+          &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 2px;
+            left: 2px;
+            width: 9px;
+            height: 5px;
+            border-bottom: 1px solid var(--color-control);
+            border-left: 1px solid var(--color-control);
+            transform: rotate(-45deg);
+          }
+        }
+  
+        &:disabled {
+          + .fake_box {
+            border-color: var(--color-disabled);
+            cursor: default;
+  
+            .text {
+              color: var(--color-disabled);
+            }
+  
+            &::after {
+              border-color: var(--color-disabled);
+            }
+          }
+        }
+      }
+  
+      &:focus .input:disabled + .fake_box,
+      &:active .input:disabled + .fake_box {
+        background-color: transparent;
+        filter: none;
+      }
+  
+      &:focus-visible {
+        outline: none;
+      }
+    }
+  
+    .fake_box {
+      position: relative;
+      box-sizing: border-box;
+      width: 16px;
+      height: 16px;
+      border: 1px solid var(--color-control);
+      border-radius: 3px;
+      cursor: pointer;
+      transition: background-color 0.1s ease-in-out;
+  
+      .dot {
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        box-sizing: border-box;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: var(--color-control);
+      }
+    }
+  
+    &:focus-visible {
+      outline: none;
+    }
+  }
+  

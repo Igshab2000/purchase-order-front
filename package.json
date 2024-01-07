@@ -22,6 +22,7 @@
     "@types/react-router-dom": "^5.3.3",
     "@types/webpack": "^5.28.0",
     "@types/webpack-dev-server": "^4.7.2",
+    "@types/react-input-mask": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^6.8.0",
     "css-loader": "^6.8.1",
     "eslint": "^8.34.0",
@@ -61,6 +62,9 @@
     "react-hook-form": "^7.33.0",
     "react-router-dom": "^5.3.0",
     "react-table": "^7.7.0",
-    "webpack": "^5.88.2"
+    "webpack": "^5.88.2",
+    "react-input-mask": "^2.0.4",
+    "yup": "^0.32.11",
+    "@hookform/resolvers": "^2.8.3"
   }
 }

@@ -1,5 +1,5 @@
-import type { TFirstStepForm, TSecondStepForm, TThirdStepForm } from 'formTypes';
 import { createContext } from 'react';
+import type { TFirstStepForm, TSecondStepForm, TThirdStepForm } from 'formTypes';
 
 export type TDataContext = {
   data: TData;

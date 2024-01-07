@@ -3,15 +3,15 @@
     flex-direction: column;
 
     .input {
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 400;
         border-radius: 8px;
         border: 0;
-        border: 1px solid #50A2FB;
+        border: 1px solid var(--color-control);
         padding: 8px;
 
         &:focus {
-            outline: 1px solid #50A2FB;
+            outline: 1px solid var(--color-control);
         }
 
         &::placeholder {
@@ -20,9 +20,12 @@
     }
 
     .label {
-        height: 18px;
         font-weight: 400;
-        font-size: 16px;
+        font-size: 0.9rem;
         margin-bottom: 8px;
+    }
+
+    .error {
+        color: #E03E1A
     }
 }

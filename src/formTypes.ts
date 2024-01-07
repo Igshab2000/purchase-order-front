@@ -39,8 +39,10 @@ export type TPartsList = {
 };
 
 export type TThirdStepForm = {
+  // Дефолтный список работ
+  isDefaultList: boolean;
   // Список работ
-  workList: Array<TWorkList>;
+  workList?: Array<TWorkList>;
   // Список запчастей
-  partsList: Array<TPartsList>;
+  partsList?: Array<TPartsList>;
 };

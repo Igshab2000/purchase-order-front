@@ -8,9 +8,14 @@ body {
   overflow: auto;
   background: var(--tg-theme-bg-color);
   color: var(--tg-theme-text-color);
+  font-size: 12px;
 }
 
 #root {
   height: 100%;
   width: 100%;
+}
+
+:root {
+  --color-control: #50A2FB
 }
